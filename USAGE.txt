@@ -1,0 +1,21 @@
+Make sure to make the ransomware.sh executable by running
+chmod +x ransomware.sh
+
+Syntax: ./ransomware.sh [-flag] [num_of_files] [directory]
+
+[num_of_files] : The number of files to opearte on
+
+[Flags]:
+-e : Creates and encrypts <num_of_files> files with openssl 256 ecb
+-d : Decrypts them
+-h : Prints help menu
+
+
+[directory]: You have to use the full path as 3d argument
+
+
+NOTES:
+The files are created using test_aclog which then uses fopen-fwrite.
+LD_PRELOAD is already embedded in the script so you just run the script
+and file_logging.log will be generated in the current directory.
+
